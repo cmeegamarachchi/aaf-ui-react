@@ -3,9 +3,7 @@
    "build":{
       "dockerfile":"Dockerfile"
    },
-   "forwardPorts":[
-      3000
-   ],
+   "forwardPorts":[5179],
    "customizations":{
       "vscode":{
          "settings":{
@@ -28,9 +26,5 @@
          ],
          "workbench.iconTheme":"material-icon-theme"
       }
-   },
-   "runArgs":[
-      "--privileged"
-   ],
-   "remoteUser":"vscode"
+   }
 }
