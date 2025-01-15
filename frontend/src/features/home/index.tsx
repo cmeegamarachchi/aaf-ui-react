@@ -14,7 +14,7 @@ const Welcome = () => {
         
         <p className="text-xl text-center text-gray-600 max-w-2xl mx-auto">
           Jumpstart your development with this flexible starter kit. 
-          Built with React, Tailwind CSS, and shadcn/ui.
+          Built with Vite, React, Tailwind CSS, and shadcn/ui.
         </p>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
