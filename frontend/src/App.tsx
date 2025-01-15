@@ -1,18 +1,44 @@
-import './App.css'
+import "./App.css";
 
-import { Button } from "@/components/ui/button"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { SidebarProvider } from "./components/ui/sidebar";
 
-function Home() {
+import Site404Page from "./features/core/Site404Page";
+import ContactsPage from "./features/contacts/ContactsPage";
+import SettingsPage from "./features/settings/SettingsPage";
+import ErrorPage from "./features/core/ErrorPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <ContactsPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/contacts",
+    element: <ContactsPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/contacts/all",
+    element: <ContactsPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/settings",
+    element: <SettingsPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "*",
+    element: <Site404Page />,
+  },
+]);
+
+export default function App() {
   return (
-    <div>
-      <Button>Click me</Button>
-    </div>
-  )
+    <SidebarProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </SidebarProvider>
+  );
 }
-
-
-function App() {
-  return <Home />
-}
-
-export default App
