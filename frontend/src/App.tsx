@@ -7,11 +7,12 @@ import Site404Page from "./features/core/Site404Page";
 import ContactsPage from "./features/contacts/ContactsPage";
 import SettingsPage from "./features/settings/SettingsPage";
 import ErrorPage from "./features/core/ErrorPage";
+import HomePage from "./features/home";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <ContactsPage />,
+    element: <HomePage />,
     errorElement: <ErrorPage />,
   },
   {

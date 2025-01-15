@@ -1,4 +1,4 @@
-import { BookOpen, Bot, LifeBuoy, Send, Settings2, SquareTerminal, Database } from "lucide-react";
+import { BookOpen, Bot, LifeBuoy, Send, Settings2, SquareTerminal, Database, HomeIcon } from "lucide-react";
 
 
 const sideNavConfig = {
@@ -9,6 +9,12 @@ const sideNavConfig = {
       avatar: "/avatars/shadcn.jpg",
     },
     navMain: [
+      {
+        title: "Home",
+        url: "/",
+        icon: HomeIcon,
+        isActive: true,
+      },      
       {
         title: "Contacts",
         url: "/contacts",
