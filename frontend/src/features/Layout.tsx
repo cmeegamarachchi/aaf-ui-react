@@ -9,7 +9,11 @@ interface LayoutProps {
   breadcrumbs: BreadCrumbItem[];
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, titleToActivate, breadcrumbs }) => {
+function Title({children }:{children: React.ReactNode}) {
+  return <h1 className="text-2xl font-semibold m-4">{children}</h1>;
+} 
+
+function Layout({ children, titleToActivate, breadcrumbs }:LayoutProps) {
   const sideNavConfig = getDefaultSideNavConfig();
 
   sideNavConfig.navMain.map((item) => {
@@ -25,7 +29,9 @@ const Layout: React.FC<LayoutProps> = ({ children, titleToActivate, breadcrumbs 
     breadCrumbs: breadcrumbs,
   };
 
-  return <SideNav data={_sideNavConfig}>{children}</SideNav>;
+  return <SideNav contentTitle data={_sideNavConfig}>{children}</SideNav>;
 };
+
+Layout.Title = Title;
 
 export default Layout;

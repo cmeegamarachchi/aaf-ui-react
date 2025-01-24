@@ -15,7 +15,8 @@
             },
             "[javascript]":{
                "editor.defaultFormatter":"esbenp.prettier-vscode"
-            }
+            },
+            "workbench.iconTheme":"material-icon-theme"
          },
          "extensions":[
             "PKief.material-icon-theme",
@@ -23,8 +24,7 @@
             "ms-vscode-remote.remote-containers",
             "GitHub.copilot",
             "dsznajder.es7-react-js-snippets"
-         ],
-         "workbench.iconTheme":"material-icon-theme"
+         ]
       }
    }
 }

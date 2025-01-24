@@ -2,12 +2,15 @@ import "./App.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { SidebarProvider } from "./components/ui/sidebar";
+import { ConfigurationProvider } from "./providers/ConfigurationProvider";
+
 
 import Site404Page from "./features/core/Site404Page";
 import ContactsPage from "./features/contacts/ContactsPage";
 import SettingsPage from "./features/settings/SettingsPage";
 import ErrorPage from "./features/core/ErrorPage";
 import HomePage from "./features/home";
+import { Toaster } from "./components/ui/toaster";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +42,10 @@ const router = createBrowserRouter([
 export default function App() {
   return (
     <SidebarProvider>
-      <RouterProvider router={router}></RouterProvider>
+      <ConfigurationProvider>
+        <RouterProvider router={router}></RouterProvider>
+        <Toaster />
+      </ConfigurationProvider>
     </SidebarProvider>
   );
 }
